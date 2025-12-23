@@ -1,0 +1,4 @@
+account_id,email,memo,active
+A01,user1@gmail.com,주력 계정,TRUE
+A02,user2@gmail.com,서브 계정,TRUE
+A03,user3@gmail.com,테스트 계정,TRUE
