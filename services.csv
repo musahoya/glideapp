@@ -1,0 +1,5 @@
+service_id,site_name,url,daily_limit,reset_cycle
+S01,ChatGPT,https://chat.openai.com,50,DAILY
+S02,Gemini,https://gemini.google.com,60,DAILY
+S03,Claude,https://claude.ai,45,DAILY
+S04,Perplexity,https://perplexity.ai,5,DAILY

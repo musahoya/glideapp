@@ -1,47 +1,69 @@
-# 🎯 구글 아이디 무료할당량 관리 솔루션
+# 📱 구글 아이디 무료할당량 관리
 
-> **Airtable로 3분 만에 시작하는 스마트 관리** ✨
+> **Google AppSheet로 3분 만에 앱 완성!** ⚡
 
 ---
 
-## 🏆 최종 선택: Airtable
+## 🏆 최종 솔루션: Google AppSheet
 
-### 왜 Airtable인가?
+### 왜 AppSheet인가?
 
 | 특징 | 설명 |
 |------|------|
-| **🚀 가장 빠른 시작** | 3분이면 완성 |
-| **📱 모바일 앱** | iOS/Android 네이티브 앱 |
-| **💰 완전 무료** | 개인 사용에 충분 (1,200 records) |
-| **🎨 가장 쉬움** | 엑셀처럼 직관적 |
-| **🔄 자동화** | 알림, 요약 자동 생성 |
-| **📊 강력한 View** | 필터링, 정렬, 그룹화 |
+| **⚡ 가장 빠름** | 3분 완성 |
+| **🆓 완전 무료** | 개발 & 테스트 영구 무료 |
+| **📊 Google Sheets 직접 연동** | 변환 불필요 |
+| **📱 네이티브 앱** | iOS/Android 자동 생성 |
+| **🔄 실시간 동기화** | Sheets ↔ 앱 |
+| **🤖 강력한 자동화** | 월 500회 무료 |
 
 ---
 
 ## ⚡ 3분 빠른 시작
 
-### 1. 가입
+### 1. Google Sheets 만들기 (1분)
+
+**옵션 A: CSV 파일 가져오기 (빠름!)**
 ```
-https://airtable.com
-→ Sign up with Google
+1. https://sheets.google.com
+2. 새 스프레드시트 생성
+3. 파일 → 가져오기
+4. 프로젝트의 CSV 파일 3개 업로드:
+   - accounts.csv
+   - services.csv
+   - daily_usage.csv
 ```
 
-### 2. Base 생성
+**옵션 B: 수동 생성**
+- `GOOGLE_SHEETS_SETUP.md` 참고
+
+---
+
+### 2. AppSheet 앱 생성 (1분)
+
 ```
-Start from scratch
-→ 이름: "구글 아이디 관리"
-→ 테이블: Accounts, Services, Daily Usage
+1. https://www.appsheet.com
+2. Google 계정 로그인
+3. Create → App → Start with existing data
+4. Google Sheets 선택
+5. 파일 선택: "구글아이디_무료할당량_관리"
+6. Create app 클릭
 ```
 
-### 3. 데이터 입력
+**자동으로 앱 완성!** 🎉
+
+---
+
+### 3. 모바일 앱 사용 (1분)
+
 ```
-Form 생성
-→ 북마크 추가
-→ 매일 30초 입력
+1. App Store / Google Play
+2. "AppSheet" 검색 및 설치
+3. 로그인
+4. 내 앱 자동 표시됨!
 ```
 
-**끝!** 🎉
+**끝!** ✅
 
 ---
 
@@ -49,108 +71,79 @@ Form 생성
 
 ```
 glideapp/
-├── AIRTABLE_SOLUTION.md        ← 완전 가이드 (필독!)
-├── QUICKSTART_AIRTABLE.md      ← 3분 시작 가이드
-├── readme,txt                  ← 기존 요구사항
-└── readme1.txt                 ← 기존 Glide 방식
+├── accounts.csv                  ← Accounts 테이블
+├── services.csv                  ← Services 테이블
+├── daily_usage.csv               ← Daily Usage 테이블
+├── GOOGLE_SHEETS_SETUP.md        ← Sheets 만들기 가이드
+├── APPSHEET_GUIDE.md             ← 완전한 AppSheet 가이드
+├── readme,txt                    ← 원래 요구사항
+└── readme1.txt                   ← 기존 Glide 참고
 ```
 
 ---
 
 ## 🎯 주요 기능
 
-### ✅ 구현 가능한 모든 것
+### ✅ 즉시 사용 가능
 
-- [x] 구글 아이디 무제한 관리
+- [x] 구글 아이디 관리
 - [x] 사이트별 무료 할당량 추적
-- [x] 매일 사용량 기록 (Form으로 30초)
-- [x] 남은량 자동 계산
-- [x] 상태 자동 표시 (🔴🟡🟢)
-- [x] 위험 시 자동 알림
-- [x] 모바일에서 언제든 확인
-- [x] 아이디별/사이트별 분석
-- [x] 주간/월간 리포트
+- [x] 매일 사용량 기록 (30초)
+- [x] 드롭다운 자동 생성
+- [x] 모바일 앱
+- [x] 실시간 동기화
+
+### 🔧 추가 설정 가능 (선택)
+
+- [ ] 남은량 자동 계산 (수식)
+- [ ] 위험 시 이메일 알림
+- [ ] 일일 요약 리포트
+- [ ] 커스텀 View
+- [ ] 오프라인 모드
 
 ---
 
 ## 💡 핵심 장점
 
-### 1️⃣ 데이터 입력이 초간단
+### 1️⃣ Google과 완벽 통합
 
-**기존 방식 (Glide):**
 ```
-Google Sheets 열기
-→ 행 찾기
-→ 수동 입력
-→ 수식 확인
+Google Sheets ←→ AppSheet 앱
+실시간 양방향 동기화!
 ```
 
-**Airtable:**
-```
-Form 링크 클릭
-→ 드롭다운 선택 2번
-→ 숫자 입력
-→ Submit
-```
-
-**10배 빠름!**
+**활용:**
+- 대량 데이터 → Sheets에서 편집
+- 일상 입력 → 앱에서
+- 분석/차트 → Sheets에서
 
 ---
 
-### 2️⃣ View로 원하는 대로 보기
+### 2️⃣ 자동으로 모든 게 생성됨
 
-**만들 수 있는 View:**
+AppSheet가 자동 생성:
+- ✅ 입력 폼
+- ✅ 데이터 목록
+- ✅ 검색 기능
+- ✅ 필터
+- ✅ 드롭다운 (Ref 타입)
 
-- 📅 **오늘 사용량** - 오늘 날짜만 필터링
-- 🔴 **위험 항목** - 남은량 10개 이하
-- 📊 **아이디별 요약** - Kanban 보드로
-- 📈 **주간 트렌드** - 날짜별 그룹화
-- ⭐ **즐겨찾기 아이디** - 자주 쓰는 것만
-
-**View 전환은 클릭 한 번!**
-
----
-
-### 3️⃣ 자동화로 손 안 댐
-
-**설정 가능한 자동화:**
-
-```
-남은량 <= 10개
-→ 이메일 알림 자동 발송
-
-매일 아침 9시
-→ 오늘 위험 항목 요약 발송
-
-주말
-→ 주간 사용 리포트 생성
-```
-
-**무료 플랜: 월 100회 자동화!**
+**추가 설정 없이 바로 사용!**
 
 ---
 
-## 📱 모바일 앱
-
-### 왜 최고인가?
-
-- ✅ **네이티브 앱** (PWA 아님!)
-- ✅ **오프라인 지원**
-- ✅ **푸시 알림**
-- ✅ **빠른 속도**
-- ✅ **Form 바로가기**
-
-### 사용 시나리오
+### 3️⃣ 강력한 무료 플랜
 
 ```
-출근길 지하철에서 (30초):
-1. Airtable 앱 열기
-2. Form 탭
-3. 어제 ChatGPT 사용량 입력
-4. Submit
+✅ 무제한 앱 개발
+✅ 10명 사용자
+✅ 월 500회 자동화
+✅ 네이티브 모바일 앱
+✅ 오프라인 모드
+✅ Google Drive/Sheets 연동
 ```
 
-**완벽!**
+**개인 사용에 완벽!**
 
 ---
 
@@ -158,24 +151,25 @@ Form 링크 클릭
 
 ### 시도했던 것들
 
-| 방법 | 결과 | 문제점 |
+| 도구 | 결과 | 문제점 |
 |------|------|--------|
-| **Glide** | ❌ | Google Sheets 필요, 복잡, 비쌈 |
-| **Clappia** | ❌ | 파일 인식 안 됨, 복잡 |
-| **Airtable** | ✅ | **완벽!** |
+| **Glide** | ❌ | Google Sheets 변환 필요, 복잡, $199/월 |
+| **Clappia** | ❌ | Excel 파일 인식 안 됨 |
+| **Airtable** | △ | 괜찮지만 Google 통합 약함 |
+| **AppSheet** | ✅ | **완벽!** |
 
-### Airtable vs Others
+### 상세 비교
 
-| 항목 | Glide | Clappia | **Airtable** |
-|------|-------|---------|--------------|
-| 설정 시간 | 30분 | 1시간 | **3분** |
-| 학습 시간 | 1시간 | 2시간 | **10분** |
-| 일일 사용 | 2분 | 2분 | **30초** |
-| 모바일 | PWA | PWA | **네이티브** |
-| 무료 플랜 | 제한적 | 제한적 | **충분함** |
-| 확장성 | 낮음 | 중간 | **높음** |
+| 항목 | Glide | Clappia | Airtable | **AppSheet** |
+|------|-------|---------|----------|--------------|
+| **설정 시간** | 30분 | 1시간 | 5분 | **3분** |
+| **Google 통합** | 보통 | 낮음 | 낮음 | **완벽** |
+| **무료 플랜** | 제한적 | 제한적 | 좋음 | **최고** |
+| **자동화** | 유료 | 복잡 | 월100회 | **월500회** |
+| **모바일** | PWA | PWA | 네이티브 | **네이티브** |
+| **데이터 소스** | 변환 필요 | 업로드 | 자체 DB | **Sheets 직접** |
 
-**결론: Airtable 압승!** 🏆
+**결론: Google 사용자라면 AppSheet 압승!** 🏆
 
 ---
 
@@ -183,93 +177,57 @@ Form 링크 클릭
 
 ### 시작하기
 
-1. **QUICKSTART_AIRTABLE.md** ← 지금 바로 이것부터!
-   - 3분 만에 시작
-   - 체크리스트 형식
-   - 초보자 완벽 가이드
+**1. GOOGLE_SHEETS_SETUP.md**
+- Google Sheets 템플릿 만들기
+- CSV 가져오기 방법
+- 수동 입력 방법
 
-### 심화 학습
-
-2. **AIRTABLE_SOLUTION.md**
-   - 완전한 사용 가이드
-   - Formula, Automation, Interface
-   - 모든 기능 상세 설명
-
----
-
-## 🎓 학습 순서
-
-### Day 1 (10분)
-```
-✅ Airtable 가입
-✅ Base 생성
-✅ 샘플 데이터 입력
-✅ Form 만들기
-```
-
-### Day 2 (10분)
-```
-✅ 모바일 앱 설치
-✅ 첫 실제 사용량 입력
-✅ View 2~3개 만들기
-```
-
-### Day 3 (10분)
-```
-✅ 자동화 1개 설정
-✅ Interface 탐색
-✅ Formula 시도
-```
-
-**총 30분 투자 → 평생 사용!**
+**2. APPSHEET_GUIDE.md** ← 필독!
+- AppSheet 앱 생성
+- 커스터마이징
+- 자동화 설정
+- 모든 기능 상세 설명
 
 ---
 
 ## 🔥 실제 사용 예시
 
-### 매일 아침 루틴
+### 매일 아침 (30초)
 
 ```
-📱 Airtable 앱 열기 (5초)
-👆 Form 탭 (1초)
-📝 드롭다운 선택 2번 (10초)
-🔢 사용량 입력 (5초)
-✅ Submit (1초)
+📱 AppSheet 앱 열기
+➕ "+" 버튼
+📅 날짜: 오늘 (자동)
+👤 아이디: 드롭다운 선택
+🌐 사이트: 드롭다운 선택
+🔢 사용량: 15
+💾 저장
 
-총 22초!
+→ Google Sheets 즉시 반영!
 ```
 
-### 주간 리뷰
+### 주간 분석 (5분)
 
 ```
-💻 Airtable 웹 열기
-📊 "이번 주" View 확인
-📈 Chart로 트렌드 분석
-💭 다음 주 계획 수립
-
-총 5분!
+💻 Google Sheets 열기
+📊 피벗 테이블로 분석
+📈 차트로 시각화
+💭 전략 수립
 ```
 
 ---
 
 ## 💰 비용
 
-### 무료 플랜으로 충분!
+### 무료 플랜 (충분!)
 
 **포함:**
-- ✅ 무제한 Bases
-- ✅ 1,200 records (매일 3개씩 1년 이상)
-- ✅ 5명 협업
-- ✅ 1 GB 파일
-- ✅ Forms
-- ✅ Views
-- ✅ 월 100회 자동화
+- ✅ 무제한 앱
+- ✅ 10명 사용자
+- ✅ 월 500회 자동화
 - ✅ 모바일 앱
-- ✅ API
-
-**필요 없는 것:**
-- ❌ 유료 플랜 ($10~$20/월)
-- ❌ 추가 기능
+- ✅ 오프라인 모드
+- ✅ Google 완벽 통합
 
 **평생 $0!**
 
@@ -277,66 +235,97 @@ Form 링크 클릭
 
 ## 🚀 지금 시작하세요!
 
-### Step 1: 가이드 읽기
+### Step 1: Sheets 만들기
 ```
-QUICKSTART_AIRTABLE.md 열기 (3분)
-```
-
-### Step 2: Airtable 가입
-```
-https://airtable.com (1분)
+1. https://sheets.google.com
+2. CSV 파일 가져오기
+3. 완료!
 ```
 
-### Step 3: Base 만들기
+### Step 2: 앱 생성
 ```
-가이드 따라하기 (3분)
-```
-
-### Step 4: 사용 시작
-```
-Form으로 첫 데이터 입력! (1분)
+1. https://www.appsheet.com
+2. Sheets 연결
+3. 자동 생성!
 ```
 
-**총 8분이면 완성!** ⏱️
+### Step 3: 사용 시작
+```
+1. 모바일 앱 설치
+2. 데이터 입력
+3. 끝!
+```
+
+**총 5분!** ⏱️
 
 ---
 
-## 🎁 보너스
+## 📂 CSV 파일 설명
 
-### Airtable Universe 템플릿
-
-나중에 더 편하게:
-```
-https://airtable.com/universe
-→ 수천 개 무료 템플릿
-→ 클릭 한 번에 복사
-→ 즉시 사용!
+### accounts.csv
+```csv
+account_id,email,memo,active
+A01,user1@gmail.com,주력 계정,TRUE
+A02,user2@gmail.com,서브 계정,TRUE
 ```
 
-### 커뮤니티
+### services.csv
+```csv
+service_id,site_name,url,daily_limit,reset_cycle
+S01,ChatGPT,https://chat.openai.com,50,DAILY
+S02,Gemini,https://gemini.google.com,60,DAILY
+```
 
-질문이 있으면:
+### daily_usage.csv
+```csv
+date,account_id,service_id,usage
+2025-01-15,A01,S01,10
+2025-01-15,A01,S02,20
 ```
-https://community.airtable.com/
-→ 활발한 커뮤니티
-→ 빠른 답변
+
+**Google Sheets에 가져오기만 하면 끝!**
+
+---
+
+## 🎓 학습 순서
+
+### Day 1 (5분)
 ```
+✅ Google Sheets 생성
+✅ AppSheet 앱 생성
+✅ 모바일 앱 설치
+```
+
+### Day 2 (5분)
+```
+✅ 첫 데이터 입력
+✅ 드롭다운 설정 (Ref 타입)
+✅ View 커스터마이징
+```
+
+### Day 3 (5분)
+```
+✅ 남은량 자동 계산 (수식)
+✅ 첫 자동화 (이메일 알림)
+```
+
+**총 15분 투자 → 평생 사용!**
 
 ---
 
 ## 🏁 결론
 
-**Airtable = 완벽한 솔루션!**
+**Google AppSheet = 완벽한 솔루션!**
 
-✅ **가장 쉬움** - 3분 시작, 10분 마스터
-✅ **가장 빠름** - 매일 30초 입력
-✅ **가장 강력함** - 무한 확장 가능
-✅ **완전 무료** - 평생 $0
-✅ **가장 예쁨** - UI/UX 최고
+✅ **가장 쉬움** - 3분 시작
+✅ **가장 빠름** - 자동 생성
+✅ **완전 무료** - 개인 사용 충분
+✅ **Google 완벽 통합** - Sheets 직접 연동
+✅ **강력함** - 자동화, 모바일 앱
 
 **더 이상 고민하지 마세요!**
 
-**지금 바로 QUICKSTART_AIRTABLE.md를 열어보세요!** 🚀
+**지금 바로 APPSHEET_GUIDE.md를 열어보세요!** 🚀
 
 ---
 
@@ -344,31 +333,33 @@ https://community.airtable.com/
 
 ### 시도 1: Glide
 - ❌ Google Sheets 변환 필요
-- ❌ 복잡한 Relation 설정
-- ❌ 비싼 가격 ($199/월)
+- ❌ Relation 설정 복잡
+- ❌ $199/월
 
 ### 시도 2: Clappia
-- ❌ Excel 파일 인식 안 됨
+- ❌ Excel 파일 인식 실패
 - ❌ 복잡한 설정
-- ❌ 문서 부족
 
-### 최종: Airtable
+### 시도 3: Airtable
+- △ 괜찮지만 Google 통합 부족
+
+### 최종: AppSheet
 - ✅ **완벽!**
+- ✅ Google의 공식 도구
 - ✅ 모든 요구사항 충족
-- ✅ 추가 기능까지!
 
 ---
 
 ## Sources
 
-- [Airtable Plans Overview](https://support.airtable.com/docs/airtable-plans)
-- [Airtable Beginner's Guide | SitePoint](https://www.sitepoint.com/how-to-use-airtable-a-beginners-guide/)
-- [Airtable 2025 Guide | GAP Consulting](https://www.gapconsulting.io/blog/getting-started-in-airtable-updated-for-2025)
-- [Best No-Code App Builders 2025 | Blaze](https://www.blaze.tech/post/best-no-code-app-builders)
-- [Airtable vs AppSheet | Low Code Agency](https://www.lowcode.agency/blog/airtable-vs-appsheet)
+- [How to create an app | Google AppSheet](https://about.appsheet.com/how-to-create-an-app/)
+- [Get started with AppSheet](https://support.google.com/appsheet/answer/11581986)
+- [Google AppSheet Tutorial | Pretius](https://pretius.com/blog/google-appsheet-tutorial)
+- [AppSheet Skills Lab](https://www.skills.google/focuses/19041)
+- [Build apps from Google Sheets | Adalo](https://www.adalo.com/posts/how-to-build-app-from-google-sheets)
 
 ---
 
-**Made with ❤️ for easier productivity**
+**Made with ❤️ for Google users**
 
-**Start here: QUICKSTART_AIRTABLE.md** 👈
+**Start here: APPSHEET_GUIDE.md** 👈
